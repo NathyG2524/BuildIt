@@ -28,6 +28,7 @@ def savePage(request):
     return JsonResponse({
         "result": (json.loads.serialize('json', [page]))[0]
     })
+    
 
 def editPage (request, id):
     page = Pages.objects.get(pk=id)
