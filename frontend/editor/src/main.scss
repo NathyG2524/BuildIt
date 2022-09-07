@@ -1,5 +1,6 @@
-@import "~bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
 
 
 :root {
@@ -37,7 +38,9 @@ html {
 }
 
 
-
+.list-group-item{
+    background-color: var(--primary-color-light-blue)!important;
+}
 
 
 .Dashboard {

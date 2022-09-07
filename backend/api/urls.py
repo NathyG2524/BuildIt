@@ -23,4 +23,3 @@ urlpatterns = [
 	path('catagory-update/<str:pk>/', views.catagoriesUpdate, name="catagory-update"),
 	path('catagory-delete/<str:pk>/', views.catagoriesDelete, name="catagory-delete"),
 ]
-s

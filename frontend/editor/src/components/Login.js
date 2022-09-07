@@ -5,20 +5,31 @@ import './Login.scss';
 function Login() {
     return (
         <div className="Login">
-            <div className="header"><h1>Login</h1></div>
-            <div className="login-container">
-                <div className="container">
-                    <form className="form">
-                        <label for="email">Email: </label><br></br>
-                        <input type="text" id="email" placeholder="Email"></input><br></br>
-                        <label for="password">Password: </label><br></br>
-                        <input type="text" id="password" placeholder="Password"></input><br></br>
-                        <label for="c-password">Password: </label><br></br>
-                        <input type="text" id="c-password" placeholder="Confirm Password"></input><br></br>
-                        <button name="submit">Sign Up</button>
-                    </form>
+            <nav></nav>
+             <div className="main-container">
+                <div className="login-container">
+                    <div className="container">
+                        <form className="form">
+                            <p>
+                                <h8>ALREADY MEMBERS</h8>
+                                <h7>Need help ?</h7><br></br><br></br>
+                            </p>
+                            <input type="text" id="email" placeholder="Email"></input><br></br>
+                            <input type="password" id="password" placeholder="Password"></input><br></br>
+                            <button name="submit">Sign In</button>
+                        </form>
+                    </div>
+                    <div className="container-2">
+                        <p>Don't have an account yet ?<br></br>
+                        <a href="/signup"><span>Create an account</span></a>
+                        </p>
+                    </div>
+
+
                 </div>
             </div>
+          
+
         </div>
     )
 }
