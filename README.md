@@ -1,12 +1,12 @@
 # BuildIT ~ *Build your online presence here*
 
-![logo](https://i.imgur.com/zg49V5K.png)
+![logo](https://imgur.com/gallery/lT4Q17y)
 
 # Introduction
 
 ## The Project
-In the final month of
-Every dog owner knows the struggle of moving to a new place and not knowing anyone else with a dog. However, dogs need to socialize too! This is why we created **BuildIT**.
+In the final month before graduating from Alx-Holberton software Engineering program we were straggling to build and deploy our own portfolio webiste. let alone the straggle to choose the perfect design of for our portfolio project, It 
+This is why we created **BuildIT**. A web builder that you helps you to create your portfolio project in just few munitues.
 
 [**BuildIT**] website builder website 
 
@@ -24,14 +24,14 @@ We are three dog enthusiasts who are passionate about coding but also like to ke
 Follow us on Twitter for more dog and tech related awesomeness!
 
 ## Blog posts
-After the development phase, we each wrote a blog post to reflect on the PuppR journey.
+After the development phase, we each wrote a blog post to reflect on BuildIt.
 
 
 
 # Tutorial
 
 ## Take a tour of the deployed version at puppr.best
--> [**PuppR**](https://puppr.best/)
+-> [**BuildIT**](https://)
 
 Here is a little preview of our main feature, the swiping through other dogs' profiles:
 
