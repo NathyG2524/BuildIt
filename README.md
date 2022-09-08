@@ -1,6 +1,6 @@
 # BuildIT ~ *Build your online presence here*
 
-![logo]([https://i.imgur.com/zg49V5K.png](https://imgur.com/a/lT4Q17y))
+![logo](https://i.imgur.com/zg49V5K.png)
 
 # Introduction
 
