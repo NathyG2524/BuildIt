@@ -1,6 +1,6 @@
 # BuildIT ~ *Build your online presence here*
+[![builditlogo.jpg](https://i.postimg.cc/V6cbFp1p/builditlogo.jpg)](https://postimg.cc/rdQmVhDN)
 
-![logo](<a href='https://postimg.cc/67KjWqdX' target='_blank'><img src='https://i.postimg.cc/67KjWqdX/auth2.png' border='0' alt='auth2'/></a>)
 
 # Introduction
 
