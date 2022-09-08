@@ -65,7 +65,7 @@ When you are finished simply go back to your terminal and hit `ctrl + c` to quit
 ## Overview
 Our web app is a single-page app, coded mainly in Javascript. **PuppR** is front-end heavy, meaning that we focused our time and energy in developping a simple but easy to use and fun app. We designed most of the User Interface, using plain CSS and some native Vue transitions and animations. We also incorporated some BootstrapVue elements which offered a simple solution for some features like image uploading.
 
-![infra](https://i.imgur.com/fSbo6ho.jpg)
+[![auth2.png](https://i.postimg.cc/PqpBM8JP/auth2.png)](https://postimg.cc/67KjWqdX)
 
 ## Vue.js
 For this project, we decided to focus on learning a new front-end framework. Following the advice of mentors and professionals, we chose to learn and use Vue.js.
