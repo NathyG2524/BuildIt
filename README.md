@@ -1,6 +1,6 @@
 # Buil ~ *Build your online presence here*
 
-![logo](https://imgur.com/a/lT4Q17y)
+![logo](https://imgur.com/gallery/lT4Q17y)
 
 # Introduction
 
