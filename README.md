@@ -31,9 +31,113 @@ This project is our Portfolio Project, concluding our Foundations Year at Holber
 [![technologies.png](https://i.postimg.cc/R0jNZnZY/technologies.png)](https://postimg.cc/McmWsHR0)
 ### Architecture
 
-# ![Architecture](https://i.imgur.com/E3TaTuX.png)
+[![auth2.png](https://i.postimg.cc/PqpBM8JP/auth2.png)](https://postimg.cc/67KjWqdX)
 
 
+
+## Getting Started
+
+To start using this web application, visit lyricsforlearning.net. To install it, simply clone this repository. You can start the app by running `web_app.app` and `api.v1.app` as Python modules in separate terminal windows. Please note, in order to run this app, you will need to install necessary dependencies as well as pass in the correct MySQLdb and Words API credentials respectively.
+
+## Features
+
+### **Song selection**
+
+Lyrics For Learning provides a selection of "clean" and vocabulary-rich songs to explore from a variety of different genres. The data for each song is fetched from the internal RESTful API and is used to fill each Bootstrap card. The song's id is used as the id for the "View" button within the song's card. This allows for the correct song details to be fetched when the user clicks on the button since the id becomes part of the URL for the song.
+
+# ![song-selection](https://i.imgur.com/h3m9fko.png)
+
+### **Words To Explore**
+
+When a user selects a song, they are re-directed to a song-specific page where the song's details are fetched from the internal RESTful API. This includes a list of words to explore that appear in the lyrics for the song. Event listeners are setup on each word so that the linguistic breakdown of it can be fetched from an external API and so that it can be highlighted within the lyrics.
+
+# ![words-to-explore](https://i.imgur.com/JBlT2hx.png)
+
+### **Linguistic Breakdown and Highlighting of Words**
+
+
+When a user selects a specific word from a song, the linguistic breakdown is fetched from the external Words API. The JS script will then create a menu based the number of entries available for the word. When a user clicks on one of the entries, the script will then see what sections are available for that entry (ex: "Definition", "Synonyms", "Examples"). The available sections and their content will populate a dynamic tabbed interface for the user to browse. In addition, the word is highlighted in the lyrics. This was made possible by first parsing the lyrics and adding span elements around words that appear in the "Pick a word to explore!" list. The spans have aligned classes added to them that allow them to be targeted and thus highlighted when a word is selected.
+
+# ![linguistic-breakdown-and-highlighting-of-words](https://i.imgur.com/YKhWuCj.png)
+
+### **Submit Interpretations and View Past Interpretations**
+
+After exploring the linguistic breakdown of a word, the user can share what they think the artist means by the word. When they press "Submit", their interpretation is sent as a `POST` request to the internal RESTful API. The `better-profanity` module is then used to check the interpretation for profanity and if so, the submission is not stored in the database and a warning dialog is displayed to the user. If there is no profanity, the submission is stored in the database and can be seen in the "Latest Interpretations" section, which is an accordian-style display.
+
+# ![submit-interpretations-and-view-past-interpretations](https://i.imgur.com/lAmK39I.png)
+
+### **Suggest a Song Form**
+
+If a user would like to suggest a song to be added to the collection of songs to learn from, they can visit the "Suggest a Song" page and fill out the form. The form will ask for all necessary attributes for creating a new Song object including the song's artist, title, and words to learn from. The user must also submit their email and name so they can be notified if the song is added to the collection and receive credit for their contribution.
+
+# ![suggest-a-song-form](https://i.imgur.com/jspGhrb.png)
+
+## API
+
+I built an internal RESTful API for this web application so that data can be flexibly retreived from the MySQLdb. All available endpoints can be found in the `api.v1.views` directory. Here's a description of each endpoint:
+
+/api/v1/interpretations/<word_id>/<song_id>
+
+* GET: Retrieves all Interpretation objects for a word from a song and returns a list containing
+    all of them
+    
+* POST: Creates an interpretation for a word from a song
+
+/api/v1/interpretations/<interpretation_id>
+
+* PUT: Updates an Interpretation object
+
+/api/v1/songs/<song_id>/words
+
+* GET: Retrieves all words from a song and returns a list containing
+    all of them
+
+/api/v1/songs
+
+* GET: Retrieves all Song objects from database and returns a list containing
+    all of them
+
+/api/v1/songs/<text>
+  
+* GET: Retrieves Song object from database and returns a dictionary
+
+/api/v1/songs/genre/<genre>
+  
+* GET: Retrieves all Song objects from database with a specified genre
+
+/api/v1/suggestions/
+
+* GET: Retrieves all Suggestion objects from database and returns a list containing
+    all of them
+    
+* POST: Creates a Suggestion object
+
+/api/v1/words/<text>
+  
+* GET: Retrieves word_id based on word
+
+/api/v1/words_api/<text>
+
+* GET: Retrieves data for word from external API and returns response to client-side.
+     By passing in API credentials from the command line when running the API and 
+     using the internal API for the fetch, it prevents credentials from being exposed
+     on the front-end.
+     
+## Future
+
+Beyond this initial MVP which was built in 2 weeks, I would like to continue to add many more features to Lyrics For Learning. In particular, I would like to setup an authentication system. With this, I would also like to enable users to have profiles so they can check out their past progress and further personalize the experience by suggesting songs and words to explore based on past use. In addition, I'd like to allow users to edit past submissions and upvote each other's interpretations as well. I am also considering adding a "Top Users" board on the homepage too.
+
+If you have any feedback (ex: feature ideas) or would like to contribute to this project, please feel free to contact me.
+
+## Attributions
+
+Shout-out to [Open Lyrics Database](https://github.com/Lyrics/lyrics) for the lyrics shown!
+
+Licenses for images from Wikimedia Commons:
+
+* [The xx at the Alcatraz.jpg](https://commons.wikimedia.org/wiki/File:The_xx_at_the_Alcatraz.jpg)
+* [Adele Live 2016 tour.jpeg](https://commons.wikimedia.org/wiki/File:Adele_Live_2016_tour.jpeg)
+* [Paul Simonon The Clash September 20 1979 Palladium NYC.jpg](https://commons.wikimedia.org/wiki/File:Paul_Simonon_The_Clash_September_20_1979_Palladium_NYC.jpg)
 ## The Team
 We are three dog enthusiasts who are passionate about coding but also like to keep it fun!
 
@@ -41,115 +145,3 @@ We are three dog enthusiasts who are passionate about coding but also like to ke
 * **Tihitina Sisay** [@Tihitina](https://) - Software Engineer
 * **Tihitina Sisay** [@Tihitina]() - Software Enginineer
 * **Abdisa Gemechu** [@Abdisa](https://linkedin/abdisa-gemechu) -Software Enginineer
-
-Follow us on Twitter for more dog and tech related awesomeness!
-
-## Blog posts
-After the development phase, we each wrote a blog post to reflect on BuildIt.
-
-
-
-# Tutorial
-
-## Take a tour of the deployed version at puppr.best
--> [**BuildIT**](https://)
-
-Here is a little preview of our main feature, the swiping through other dogs' profiles:
-
-![swiping](./public/icons/browse_no_text.png)
-
-Here is a simple flow for the user experience on PuppR:
-
-![user-flow](https://i.imgur.com/hRxU79B.jpg)
-
-## Run PuppR with Vue-CLI
-Installing the programs necessary to view this project is pretty simple!
-
-We'll be using [`npm`](https://www.npmjs.com/get-npm) to install Vue and Vue-CLI. First clone this repo, then navigate to the root and [install Vue](https://vuejs.org/v2/guide/installation.html) by executing this command:
-`puppr$ npm install vue`
-
-Once that has finished, [install Vue-CLI](https://cli.vuejs.org/guide/installation.html) with this command:
-`puppr$ npm install -g @vue/cli`
-
-In case there are any missing dependencies, please execute `puppr$ npm install` to get them. If there's an error, it should return the specific command you need to enter.
-
-Once this is all done you're ready to run **PuppR**! Still in the root of this directory, simply execute `puppr$ npm run serve` and give it a few seconds to get started. Once it's up, you can open your web browser and enter `localhost:8080`. This will allow you to try out **PuppR**!
-
-When you are finished simply go back to your terminal and hit `ctrl + c` to quit the program.
-
-## Known bugs
-* Some transitions are not as fluid as expected, and due to API calls lag can be a bit off.
-* Issue when viewing on mobile. Many of the assets become squished vertically.
-
-# Architecture
-
-## Overview
-Our web app is a single-page app, coded mainly in Javascript. **PuppR** is front-end heavy, meaning that we focused our time and energy in developping a simple but easy to use and fun app. We designed most of the User Interface, using plain CSS and some native Vue transitions and animations. We also incorporated some BootstrapVue elements which offered a simple solution for some features like image uploading.
-
-[![auth2.png](https://i.postimg.cc/PqpBM8JP/auth2.png)](https://postimg.cc/67KjWqdX)
-
-## Vue.js
-For this project, we decided to focus on learning a new front-end framework. Following the advice of mentors and professionals, we chose to learn and use Vue.js.
-
-Every different section of the app is a Vue component, and all the components can be found in the directory [src/components/](./src/components/). The main component "App" is defined in [App.vue](./src/App.vue), and is the entry point of the app.
-
-All the components are linked together thanks to a VueRouter instance, defined in [index.js](./routes/index.js). Each component is linked to a route, which path is appended automatically at the end of our URL.
-
-The [main.js](./src/main.js) file contains the instanciation of the Vue for the entire app, as well as the config options, database session and authentication session.
-
-Another interesting point about Vue.js is that it allowed us to use a store, defined in [store.js](./src/store.js). This store is a front-end store that keep strack of the state of components and data throughout the app. This is were the data from our database requests is stored and updated before going back in the database. This store also allows to not pass props from each component to all its children components, and to access data from anywhere without having to use and event bus.
-
-### List of components
-
-These components make up what a user experiences when they check out **PuppR**. Each component contains the code for a specific page of the app. These components can be located in [src/components](./src/components).
-
-| Component | Description |
-|-----------|-------------|
-| [Landing.vue](./src/components/Landing.vue) | The landing page a user sees when they navigate to **PuppR**. |
-| [Login.vue](./src/components/Login.vue)   | The login page. There's a link to go to the Signup page if a user hasn't signed up. |
-| [Matches.vue](./src/components/Matches.vue) | Page where users can see the other users they've matched with. A match occurs when two users have liked each other. |
-| [Navbar.vue](./src/components/Navbar.vue) | The navigation bar that appears at the top of most every other component |
-| [Settings.vue](./src/components/Settings.vue) | Users can change their email address, display name, city, and zip code on this page. |
-| [Signup.vue](./src/components/Signup.vue) | Signup page for users who do not have an account. It asks for a valid email address and for them to make and confirm a password. |
-| [Swiping.vue](./src/components/Swiping.vue) | The main page of **PuppR** where users can see another user's profile and choose whether to 'like' or 'pass.' |
-| [UserProfile.vue](./src/components/UserProfile.vue) | Similar to Settings.vue, on this page the user can change their dog's information including likes, dislikes, and fun facts. |
-
-## Firebase
-We decided to go with Firebase for our backend/database as it provides all the functionality we need to develop this project such as authentication, database storage, and cloud storage. As a non-relational database, it made calling any required information simple.
-
-Firebase was incredibly helpful while we were testing as it allowed us to look through each user's collection of information. This was helpful while we were implementing the logic for user likes and matches.
-
-### Firestore
-Since our app requires frequent and numerous database calls, Firestore provides a reliable and responsive solution to achieve a seamless experience. Practically all user information, such as display name, dog info, and even their like/match lists are kept in the Firestore. This lets us quickly populate each vue with relevant information.
-
-For instance, when a user logs in they'll be taken to the main [Swiping](./src/components/Swiping.vue) component where another user's image, dog name, age, and location will be dispalyed. They can choose to 'like' or 'pass' the dog, which will immediately populate with another dog's information. Firebase's quick database calls populate this information and help keep this functionality snappy.
-
-Images are kept in the Firestore as a link to where they're held in cloud storage. 
-### Authentication
-As our app connects people and their dogs, authentication is a necessity. Firebase provides a straightforward and easy-to-implement solution so we can focus on designing an accessible app. Users simply sign up with an existing email address and a password of their choice. Firebase Authentication does the heavy lifting to make sure users are authentic.
-### Cloud Firestore
-The obvious choice for storing users' dog photos. It provides straightforward implementation for users to upload their photo and a relatively quick way to call and display these images for users to sift through.
-
-# Acknowledgments
-
-* Holberton School staff - For the help, advice and resources they provided us with during this project and during all our curriculum.
-
-* Cohort 8 and all Holberton students - For your friendship, invaluable support, and insight not only for this project, but over the last year.
-
-* Our dogs (or friends' dogs) - For the inspiration, courage and love they brought us when we were working hard and tired.
-
-* Romain Bonhomme - For his incredible Vue.js knowledge and overall front-end good practices.
-
-* Valentin Roudge - For his help and advice in Node.js and architecture best practices.
-
-* YOU - For reading this documentation and testing out **PuppR**. We hope you enjoyed the ride!
-
-# Related projects
-
-* [AirBnB Clone](https://github.com/lroudge/AirBnB_clone_v4): a simple web app made in Python, Flask, and JQuery.
-
-* [Simple Shell](https://github.com/scurry222/simple_shell): a command line interpreter that replicates the sh program.
-
-# License
-
-MIT License
