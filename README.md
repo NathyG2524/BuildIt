@@ -1,17 +1,38 @@
 # BuildIT ~ *Build your online presence here*
 [![builditlogo.jpg](https://i.postimg.cc/V6cbFp1p/builditlogo.jpg)](https://postimg.cc/rdQmVhDN)
 
+## Table of content
 
-# Introduction
+- [Inspiration](#inspiration)
+- [Technologies](#technologies)
+- [Getting Started](#getting-started)
+- [Features](#features)
+    - [Song Selection](#song-selection)
+    - [Words To Explore](#words-to-Explore)
+    - [Linguistic Breakdown and Highlighting Of Selected Words](#linguistic-breakdown-and-highlighting-of-selected-words)
+    - [Submit interpretations and view past submissions](#submit-interpretations-and-view-past-submissions)
+    - [Suggest a Song Form](#suggest-a-song)
+- [API](#API)
+- [Future](#future)
+- [Attributions](#attributions)
+- [The Team](#the-team)
 
-## The Project
+## Inspiration
 In the final month before graduating from Alx-Holberton software Engineering program we were straggling to build and deploy our own portfolio webiste. let alone the straggle to choose the perfect design of for our portfolio project, It 
 This is why we created **BuildIT**. A web builder that you helps you to create your portfolio project in just few munitues.
-
-[**BuildIT**] website builder website 
-
-## The Context
+### Context
 This project is our Portfolio Project, concluding our Foundations Year at Holberton School. We were able to choose who we wanted to work with and what we wanted to work on, as long as we present a working program at the end of the three weeks of development.
+
+[**BuildIT**](https://letsbuidit.netlify.app/) website builder website 
+
+## Technologies
+### Tools
+
+[![technologies.png](https://i.postimg.cc/R0jNZnZY/technologies.png)](https://postimg.cc/McmWsHR0)
+### Architecture
+
+# ![Architecture](https://i.imgur.com/E3TaTuX.png)
+
 
 ## The Team
 We are three dog enthusiasts who are passionate about coding but also like to keep it fun!
