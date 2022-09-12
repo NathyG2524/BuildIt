@@ -7,8 +7,8 @@
 - [Technologies](#technologies)
 - [Getting Started](#getting-started)
 - [Features](#features)
-    - [Song Selection](#song-selection)
-    - [Words To Explore](#words-to-Explore)
+    - [Templete Selection](#templete-selection)
+    - [Editing Custom Templetes](#editing-custom-templetes)
     - [Linguistic Breakdown and Highlighting Of Selected Words](#linguistic-breakdown-and-highlighting-of-selected-words)
     - [Submit interpretations and view past submissions](#submit-interpretations-and-view-past-submissions)
     - [Suggest a Song Form](#suggest-a-song)
@@ -48,11 +48,12 @@ BuildIt provides a selection of "clean" and elelegant website designs to explore
 
 [![previewtemletes.png](https://i.postimg.cc/yY3WqBvm/previewtemletes.png)](https://postimg.cc/kB97KrrG)
 
-### **Words To Explore**
+### **Editing Custom Templetes**
 
-When a user selects a song, they are re-directed to a song-specific page where the song's details are fetched from the internal RESTful API. This includes a list of words to explore that appear in the lyrics for the song. Event listeners are setup on each word so that the linguistic breakdown of it can be fetched from an external API and so that it can be highlighted within the lyrics.
+When a user clicks on the edit button below the templete an editable templete-specific page where the templete's details are fetched from the internal RESTful API.
+The user can change the fontstyles, font-color, upload-pictures ... and save the page inside the users profile.
 
-# ![words-to-explore](https://i.imgur.com/JBlT2hx.png)
+[![editor.png](https://i.postimg.cc/2j4t89TP/editor.png)](https://postimg.cc/7bZ9KVFV)
 
 ### **Linguistic Breakdown and Highlighting of Words**
 
