@@ -18,7 +18,7 @@
 - [The Team](#the-team)
 
 ## Inspiration
-In the final month before graduating from the Alx-Holberton software engineering program, we were struggling to build and deploy our own portfolio website. Let alone the struggle to choose the perfect design for our portfolio project, it takes a lot of time coding to get the perfect portfolio site.  We think a lot of people have faced the same problem.
+In the final month before graduating from the Alx-Holberton software engineering program, we were struggling to build and deploy our own portfolio website. Let alone the struggle to choose the perfect design for our portfolio project, it takes a lot of time coding to get the perfect portfolio site.  We think a lot of people have faced the same problem.
 
 Our platform's primary objective is to help non-coders get their own portfolio and landing pages in just few clicks. This is why we created **BuildIT**. A web builder that helps you create your portfolio project in just a few minutes.
 
@@ -40,6 +40,23 @@ This project is our Portfolio Project, concluding our Foundations Year at Holber
 ## Getting Started
 
 To start using this web application, visit https://letsbuidit.netlify.app. To install it, simply clone this repository. You can start the app locally by downloading the neccessary dependencies for the frontend and start the app using the command "npm start". In addition you have to clone the repository for the backend , download the neccessary dependencies for the backend and run the backend using the command "python3 manage.py runserver".
+clone the repository
+
+```
+git clone git@github.com:NathyG2524/BuildIt.git
+```
+
+install dependencies
+
+```
+npm install
+```
+
+Start the dev server
+
+```
+npm run dev
+```
 
 ## Features
 
