@@ -18,8 +18,10 @@
 - [The Team](#the-team)
 
 ## Inspiration
-In the final month before graduating from Alx-Holberton software Engineering program we were straggling to build and deploy our own portfolio webiste. let alone the straggle to choose the perfect design of for our portfolio project, It 
-This is why we created **BuildIT**. A web builder that you helps you to create your portfolio project in just few munitues.
+In the final month before graduating from the Alx-Holberton software engineering program, we were struggling to build and deploy our own portfolio website. Let alone the struggle to choose the perfect design for our portfolio project, it takes a lot of time coding to get the perfect portfolio site.  We think a lot of people have faced the same problem.
+
+Our platform's primary objective is to help non-coders get their own portfolio and landing pages in just few clicks. This is why we created **BuildIT**. A web builder that helps you create your portfolio project in just a few minutes.
+
 ### Context
 This project is our Portfolio Project, concluding our Foundations Year at Holberton School. We were able to choose who we wanted to work with and what we wanted to work on, as long as we present a working program at the end of the three weeks of development.
 
