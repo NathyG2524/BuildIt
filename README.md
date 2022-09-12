@@ -63,54 +63,76 @@ By clicking on the edior nav bar you can create you own templete by dragging and
 
 ## API
 
-I built an internal RESTful API for this web application so that data can be flexibly retreived from the MySQLdb. All available endpoints can be found in the `api.v1.views` directory. Here's a description of each endpoint:
+We built an API using Django-Rest framework where the front end can access the backend server and  can do CRUD operations. Here's a description of each endpoint:
 
-/api/v1/interpretations/<word_id>/<song_id>
+### Endpoints
+---
+    1.  GET /pages: Get all pages.
 
-* GET: Retrieves all Interpretation objects for a word from a song and returns a list containing
-    all of them
+    Fetches all pages.
+    returns: an object with the following fields:
+
+    Sample: curl -X GET http://localhost:8000/api/pages/
     
-* POST: Creates an interpretation for a word from a song
+``` json
+    [
+    {
+        "id": 18,
+        "name": "untitled",
+        "description": "",
+        "html": "<body><link rel=\"preconnect\" 
+                    ........
+                    ..... </footer></body>",
+        "css": "* { box-sizing: border-box; } body {margin: 0;}section{font-family:Poppins, sans-serif;}#ivhzpl{background-image:url(https://images.unsplash.com/photo-1642427749670-f20e2e76ed8c?auto=format&fit=crop&w=880&q=80);}"
+    },
+    {
+        "id": 19,
+        "name": "untitled",
+        "description": "",
+        "html": "<body><div class=\"mx-auto right-0 mt-2 w-60\"><div class=\"bg-white rounded overflow-hidden shadow-lg\"><div class=\"text-center p-6 bg-gray-800 border-b\">\r\n
+        ................
+        .........</div></footer></body>",
+        "css": "* { box-sizing: border-box; } body {margin: 0;}section{font-family:Poppins, sans-serif;}#i9rjso{background-image:url(https://images.unsplash.com/photo-1642427749670-f20e2e76ed8c?auto=format&fit=crop&w=880&q=80);}"
+    },
+    {
+        "id": 20,
+        "name": "untitled",
+        "description": "",
+        "html": "<body><div class=\"mx-auto right-0 mt-2 w-60\"><div class=\"bg-white rounded overflow-hidden shadow-lg\"><div class=\"text-center p-6 bg-gray-800 border-b\">\r\n.............
+        ..............................
+        ..................</footer></body>",
+        "css": "* { box-sizing: border-box; } body {margin: 0;}section{font-family:Poppins, sans-serif;}#i9rjso{background-image:url(https://images.unsplash.com/photo-1642427749670-f20e2e76ed8c?auto=format&fit=crop&w=880&q=80);}"
+    }
+]
+```
+---
 
-/api/v1/interpretations/<interpretation_id>
+---
+    1.  GET '/pages${integer}': Get all pages.
 
-* PUT: Updates an Interpretation object
+    Fetches all pages.
+    returns: an object with the following fields:
 
-/api/v1/songs/<song_id>/words
-
-* GET: Retrieves all words from a song and returns a list containing
-    all of them
-
-/api/v1/songs
-
-* GET: Retrieves all Song objects from database and returns a list containing
-    all of them
-
-/api/v1/songs/<text>
-  
-* GET: Retrieves Song object from database and returns a dictionary
-
-/api/v1/songs/genre/<genre>
-  
-* GET: Retrieves all Song objects from database with a specified genre
-
-/api/v1/suggestions/
-
-* GET: Retrieves all Suggestion objects from database and returns a list containing
-    all of them
+    Sample: curl -X GET http://localhost:8000/api/pages/
     
-* POST: Creates a Suggestion object
+``` json
 
-/api/v1/words/<text>
-  
-* GET: Retrieves word_id based on word
+---
 
-/api/v1/words_api/<text>
+    3. DELETE '/pages/${integer}':  Deletes a page
 
-* GET: Retrieves data for word from external API and returns response to client-side.
-     By passing in API credentials from the command line when running the API and 
-     using the internal API for the fetch, it prevents credentials from being exposed
-     on the front-end.
+    Request Arguments: `id` is the page id of the page to be deleted.
+    Returns: An object with the following fields:
+
+    Sample: curl -X GET http://localhost:8000/pages/18
+
+``` json
+{
+    "success": true,
+    "deleted": "18"
+}
+```
+---
      
 ## Future
 
@@ -124,7 +146,7 @@ If you have any feedback (ex: feature ideas) or would like to contribute to this
 
 ### Back-End :feet:
 
-[View the dedicated back-end README.md.](./backend)
+[View the dedicated back-end README.md.](https://github.com/abdisag1/builditproduction#readme)
 
 ## The Team
 We are three dog enthusiasts who are passionate about coding but also like to keep it fun!
