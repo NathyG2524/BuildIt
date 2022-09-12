@@ -126,7 +126,6 @@ If you have any feedback (ex: feature ideas) or would like to contribute to this
 
 [View the dedicated back-end README.md.](./backend)
 
-
 ## The Team
 We are three dog enthusiasts who are passionate about coding but also like to keep it fun!
 
