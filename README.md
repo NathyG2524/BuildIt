@@ -38,15 +38,15 @@ This project is our Portfolio Project, concluding our Foundations Year at Holber
 
 ## Getting Started
 
-To start using this web application, visit lyricsforlearning.net. To install it, simply clone this repository. You can start the app by running `web_app.app` and `api.v1.app` as Python modules in separate terminal windows. Please note, in order to run this app, you will need to install necessary dependencies as well as pass in the correct MySQLdb and Words API credentials respectively.
+To start using this web application, visit https://letsbuidit.netlify.app. To install it, simply clone this repository. You can start the app locally by downloading the neccessary dependencies for the frontend and start the app using the command "npm start". In addition you have to clone the repository for the backend , download the neccessary dependencies for the backend and run the backend using the command "python3 manage.py runserver".
 
 ## Features
 
-### **Song selection**
+### **Template selection**
 
-Lyrics For Learning provides a selection of "clean" and vocabulary-rich songs to explore from a variety of different genres. The data for each song is fetched from the internal RESTful API and is used to fill each Bootstrap card. The song's id is used as the id for the "View" button within the song's card. This allows for the correct song details to be fetched when the user clicks on the button since the id becomes part of the URL for the song.
+BuildIt provides a selection of "clean" and elelegant website designs to explore from a variety of different catagories. The data for each templete is fetched from the internal RESTful API and is used to fill each Bootstrap card. The templete's id is used as the id for the "View" button within the templete card. This allows for the correct templete details to be fetched when the user clicks on the button since the id becomes part of the URL for the templete.
 
-# ![song-selection](https://i.imgur.com/h3m9fko.png)
+[![previewtemletes.png](https://i.postimg.cc/yY3WqBvm/previewtemletes.png)](https://postimg.cc/kB97KrrG)
 
 ### **Words To Explore**
 
