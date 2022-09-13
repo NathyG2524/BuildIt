@@ -4,7 +4,7 @@ import './FirstSec.css';
 
 function FirstSec() {
     return (
-        <div class="row">
+        <div className="row">
             <div className="column">
                 <div className='column-image'></div>               
             </div>

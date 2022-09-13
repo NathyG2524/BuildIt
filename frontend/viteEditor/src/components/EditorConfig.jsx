@@ -113,7 +113,36 @@ function EditorConfig() {
                     command: 'save-db',
                     attributes: { title: 'Save DB' },
                     
-                }],
+                },{
+                    id: "cmd-clear",
+                    className: "fa fa-trash",
+                    command: "cmd-clear",
+                  },
+                  {
+                    id: "undo",
+                    className: "fa fa-undo",
+                    command: "undo",
+                  },
+                  {
+                    id: "redo",
+                    className: "fa fa-repeat",
+                    command: "redo",
+                  },],
+                {
+        id: "cmd-clear",
+        className: "fa fa-trash",
+        command: "cmd-clear",
+      },
+      {
+        id: "undo",
+        className: "fa fa-undo",
+        command: "undo",
+      },
+      {
+        id: "redo",
+        className: "fa fa-repeat",
+        command: "redo",
+      },
                 
             );
 
@@ -162,7 +191,20 @@ function EditorConfig() {
                 setEditor(editor)
         editor.on('storage:load', function (e) { console.log('Loaded ', e); });
         editor.on('storage:store', function (e) { console.log('Stored ', e); });
-
+        editor.Commands.add("cmd-clear", {
+            run: (editor) => {
+              editor.DomComponents.clear();
+              editor.CssComposer.clear();
+            },
+          });
+          // undo
+          editor.Commands.add("undo", {
+            run: (editor) => editor.UndoManager.undo(),
+          });
+          // redo
+          editor.Commands.add("redo", {
+            run: (editor) => editor.UndoManager.redo(),
+          });
         
 
 
