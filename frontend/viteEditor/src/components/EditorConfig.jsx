@@ -7,6 +7,7 @@ import gjsPresetWebpage from 'grapesjs-blocks-basic';
 import gjsNavbar from 'grapesjs-navbar';
 import gjsForms from 'grapesjs-plugin-forms';
 import gjsCustom from 'grapesjs-custom-code';
+import gjsExport from 'grapesjs-plugin-export';
 import 'bootstrap';
 import axios from 'axios';
 import axiosInstanceapi from "../axiosApi";
@@ -77,12 +78,13 @@ function EditorConfig() {
             clearOnRender: true,
             width: "auto",
             // storageManager: false,
-            plugins: [gjsPresetWebpage, gjsNavbar, gjsForms, gjsCustom],
+            plugins: [gjsPresetWebpage, gjsNavbar, gjsForms,gjsExport, gjsCustom],
             pluginsOpts: {
                 gjsPresetWebpage: {},
                 gjsNavbar: {},
                 gjsForms: {},
                 gjsCustom: {},
+                gjsExport: {},
             }, allowScripts: 1,
             canvas: {
                 scripts: [
