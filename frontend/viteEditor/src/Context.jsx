@@ -3,7 +3,7 @@
 import { createContext, useState } from 'react';
 
 //create a context, with createContext api
-export const userDetailsContext = createContext(false);
+export const userDetailsContext = createContext(true);
 
 const UserDetailsProvider = (props) => {
     // this state will be shared with all components 

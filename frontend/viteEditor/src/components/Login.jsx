@@ -41,7 +41,7 @@ export default function Login() {
         console.log(res);
         console.log(`error`);
         console.log(res.data);
-        setIsloged(true);
+        setIsloged(false);
         console.log(islogd)
       })
       .catch((err) => {

@@ -34,7 +34,7 @@ function Nav() {
         <Link to='/'>Product</Link>
         <Link to='/editor'>Editor</Link>
         <Link to='/template'>Templates</Link>
-        {!islogd ?
+        { islogd ?
           <>
             <Link to='/'>
               <button className="loginBtn1">Log in</button></Link>
